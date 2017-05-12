@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E724C0A31EC581C200C44834 /* SqliteModelTool.m in Sources */ = {isa = PBXBuildFile; fileRef = E724C0A21EC581C200C44834 /* SqliteModelTool.m */; };
+		E724C0A61EC581CF00C44834 /* Student.m in Sources */ = {isa = PBXBuildFile; fileRef = E724C0A51EC581CF00C44834 /* Student.m */; };
+		E724C0A91EC5851F00C44834 /* ModelTool.m in Sources */ = {isa = PBXBuildFile; fileRef = E724C0A81EC5851F00C44834 /* ModelTool.m */; };
+		E724C0AB1EC5881B00C44834 /* ModelToolTest.m in Sources */ = {isa = PBXBuildFile; fileRef = E724C0AA1EC5881B00C44834 /* ModelToolTest.m */; };
 		E751BEA51EC44DDC00A8C1E2 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E751BEA41EC44DDC00A8C1E2 /* main.m */; };
 		E751BEA81EC44DDC00A8C1E2 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E751BEA71EC44DDC00A8C1E2 /* AppDelegate.m */; };
 		E751BEAB1EC44DDC00A8C1E2 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E751BEAA1EC44DDC00A8C1E2 /* ViewController.m */; };
@@ -30,6 +34,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		E724C0A11EC581C200C44834 /* SqliteModelTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SqliteModelTool.h; sourceTree = "<group>"; };
+		E724C0A21EC581C200C44834 /* SqliteModelTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SqliteModelTool.m; sourceTree = "<group>"; };
+		E724C0A41EC581CF00C44834 /* Student.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Student.h; sourceTree = "<group>"; };
+		E724C0A51EC581CF00C44834 /* Student.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Student.m; sourceTree = "<group>"; };
+		E724C0A71EC5851F00C44834 /* ModelTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ModelTool.h; sourceTree = "<group>"; };
+		E724C0A81EC5851F00C44834 /* ModelTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ModelTool.m; sourceTree = "<group>"; };
+		E724C0AA1EC5881B00C44834 /* ModelToolTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ModelToolTest.m; sourceTree = "<group>"; };
+		E724C0AE1EC5B55E00C44834 /* ModelProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ModelProtocol.h; sourceTree = "<group>"; };
 		E751BEA01EC44DDC00A8C1E2 /* Splite封装.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Splite封装.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E751BEA41EC44DDC00A8C1E2 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		E751BEA61EC44DDC00A8C1E2 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -95,6 +107,8 @@
 				E751BEA71EC44DDC00A8C1E2 /* AppDelegate.m */,
 				E751BEA91EC44DDC00A8C1E2 /* ViewController.h */,
 				E751BEAA1EC44DDC00A8C1E2 /* ViewController.m */,
+				E724C0A41EC581CF00C44834 /* Student.h */,
+				E724C0A51EC581CF00C44834 /* Student.m */,
 				E751BEAC1EC44DDC00A8C1E2 /* Main.storyboard */,
 				E751BEAF1EC44DDC00A8C1E2 /* Assets.xcassets */,
 				E751BEB11EC44DDC00A8C1E2 /* LaunchScreen.storyboard */,
@@ -117,6 +131,11 @@
 			children = (
 				E751BEBF1EC44F4100A8C1E2 /* SqliteTool.h */,
 				E751BEC01EC44F4100A8C1E2 /* SqliteTool.m */,
+				E724C0A11EC581C200C44834 /* SqliteModelTool.h */,
+				E724C0A21EC581C200C44834 /* SqliteModelTool.m */,
+				E724C0A71EC5851F00C44834 /* ModelTool.h */,
+				E724C0A81EC5851F00C44834 /* ModelTool.m */,
+				E724C0AE1EC5B55E00C44834 /* ModelProtocol.h */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -134,6 +153,7 @@
 			children = (
 				E75313811EC5456F003E7D4C /* Splite__Tests.m */,
 				E75313891EC545D0003E7D4C /* SqliteToolTest.m */,
+				E724C0AA1EC5881B00C44834 /* ModelToolTest.m */,
 				E75313831EC5456F003E7D4C /* Info.plist */,
 			);
 			path = "Splite封装Tests";
@@ -243,10 +263,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E724C0A91EC5851F00C44834 /* ModelTool.m in Sources */,
 				E751BEAB1EC44DDC00A8C1E2 /* ViewController.m in Sources */,
 				E751BEA81EC44DDC00A8C1E2 /* AppDelegate.m in Sources */,
 				E751BEA51EC44DDC00A8C1E2 /* main.m in Sources */,
 				E751BEC11EC44F4100A8C1E2 /* SqliteTool.m in Sources */,
+				E724C0A31EC581C200C44834 /* SqliteModelTool.m in Sources */,
+				E724C0A61EC581CF00C44834 /* Student.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -255,6 +278,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E75313821EC5456F003E7D4C /* Splite__Tests.m in Sources */,
+				E724C0AB1EC5881B00C44834 /* ModelToolTest.m in Sources */,
 				E753138A1EC545D0003E7D4C /* SqliteToolTest.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -457,6 +481,7 @@
 				E75313871EC5456F003E7D4C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

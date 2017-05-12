@@ -1,5 +1,5 @@
 //
-//  SqliteToolTest.m
+//  ModelToolTest.m
 //  Splite封装
 //
 //  Created by xpchina2003 on 2017/5/12.
@@ -7,14 +7,15 @@
 //
 
 #import <XCTest/XCTest.h>
-#import "SqliteTool.h"
+#import "ModelTool.h"
+#import "Student.h"
 #import "SqliteModelTool.h"
 
-@interface SqliteToolTest : XCTestCase
+@interface ModelToolTest : XCTestCase
 
 @end
 
-@implementation SqliteToolTest
+@implementation ModelToolTest
 
 - (void)setUp {
     [super setUp];
@@ -28,22 +29,14 @@
 
 - (void)testExample {
     
-//    NSString *sql = @"create table if not exists t_stu(id integer primary key autoincrement, name text not null, age integer,score real)";
-//    
-//    
-//   BOOL result = [SqliteTool deal:sql uid:nil];
-//    XCTAssertEqual(result, YES);
-    Class cls = NSClassFromString(@"Student");
-    BOOL res = [SqliteModelTool createTable:cls uid:nil];
-    XCTAssertEqual(res, YES);
+    
+//   NSString *dic = [ModelTool columnNameAndTypesStr:[Student class]];
+//   NSLog(@"%@",dic);
+    
+    
+    
 }
 
-- (void)testQuery {
-    
-    NSString *sql = @"select * from t_stu";
-    NSMutableArray *result = [SqliteTool querySql:sql uid:nil];
-    NSLog(@"%@",result);
-}
 - (void)testPerformanceExample {
     // This is an example of a performance test case.
     [self measureBlock:^{

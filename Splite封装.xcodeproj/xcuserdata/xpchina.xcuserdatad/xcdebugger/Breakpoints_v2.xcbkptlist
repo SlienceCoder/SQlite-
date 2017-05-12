@@ -9,29 +9,13 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "Splite&#x5c01;&#x88c5;Tests/SqliteToolTest.m"
-            timestampString = "516251399.854975"
+            filePath = "Splite&#x5c01;&#x88c5;Tests/ModelToolTest.m"
+            timestampString = "516274260.153586"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "41"
-            endingLineNumber = "41"
-            landmarkName = "-testQuery"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Splite&#x5c01;&#x88c5;/Classes/SqliteTool.m"
-            timestampString = "516252136.954716"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "30"
-            endingLineNumber = "30"
-            landmarkName = "+deal:uid:"
+            startingLineNumber = "35"
+            endingLineNumber = "35"
+            landmarkName = "-testExample"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
