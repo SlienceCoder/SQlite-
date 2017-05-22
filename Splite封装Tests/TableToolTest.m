@@ -30,7 +30,8 @@
 
     Class cls = NSClassFromString(@"Student");
 //    [TableTool tableSortedColumnNames:cls uid:nil];
-    BOOL result = [SqliteModelTool isTableRequiredUpdate:cls uid:nil];
+//    BOOL result = [SqliteModelTool isTableRequiredUpdate:cls uid:nil];
+   BOOL result = [SqliteModelTool updateTable:cls uid:nil];
 
 }
 

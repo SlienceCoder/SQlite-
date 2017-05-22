@@ -16,7 +16,10 @@
 {
     return NSStringFromClass(cls);
 }
-
++ (NSString *)tempTableName:(Class)cls
+{
+    return [NSStringFromClass(cls) stringByAppendingString:@"_tep"];
+}
 
 
 + (NSDictionary *)classIvarNameTypeDic:(Class)cls

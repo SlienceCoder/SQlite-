@@ -17,4 +17,7 @@
 
 // 表格是否需要和更新
 + (BOOL)isTableRequiredUpdate:(Class)cls uid:(NSString *)uid;
+
+// 更新表格
++ (BOOL)updateTable:(Class)cls uid:(NSString *)uid;
 @end

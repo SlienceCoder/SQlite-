@@ -11,6 +11,7 @@
 @interface ModelTool : NSObject
 
 + (NSString *)tableName:(Class)cls;
++ (NSString *)tempTableName:(Class)cls;
 
 // 所有的字段和类型（成员变量和类型）
 + (NSDictionary *)classIvarNameTypeDic:(Class)cls;

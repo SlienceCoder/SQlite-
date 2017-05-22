@@ -114,6 +114,37 @@ sqlite3 *ppDb = nil;
     
 }
 
++ (BOOL)dealSqlS:(NSArray <NSString *>*)sqls uid:(NSString *)uid
+{
+    
+    [self begainTransaction:uid];
+    
+    for (NSString *sql in sqls) {
+       BOOL result = [self deal:sql uid:uid];
+        if (result == NO) {
+            [self rollBackTransaction:uid];
+            return NO;
+        }
+    }
+    
+    
+    [self commitTransaction:uid];
+    return YES;
+}
+
++ (void)begainTransaction:(NSString *)uid
+{
+    [self deal:@"begin transaction" uid:uid];
+}
++ (void)commitTransaction:(NSString *)uid
+{
+    [self deal:@"commit transaction" uid:uid];
+}
++ (void)rollBackTransaction:(NSString *)uid
+{
+    [self deal:@"rollback transaction" uid:uid];
+}
+
 #pragma mark --私有方法
 + (BOOL)openDB:(NSString *)uid
 {
