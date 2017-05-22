@@ -15,4 +15,6 @@
 
 + (void)saveModel:(id)model;
 
+// 表格是否需要和更新
++ (BOOL)isTableRequiredUpdate:(Class)cls uid:(NSString *)uid;
 @end

@@ -20,4 +20,7 @@
 
 + (NSString *)columnNameAndTypesStr:(Class)cls;
 
+// 获取排序后的数据组
++ (NSArray *)allTableSortedIvarNames:(Class)cls;
+
 @end

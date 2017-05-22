@@ -7,6 +7,7 @@
 //
 
 #import "ModelTool.h"
+#import "ModelProtocol.h"
 #import <objc/runtime.h>
 
 @implementation ModelTool
@@ -24,6 +25,14 @@
     unsigned int outCount = 0;
    Ivar *varList =  class_copyIvarList(cls, &outCount);
     NSMutableDictionary *nameTypeDic = [NSMutableDictionary dictionary];
+    
+    NSArray *igonreArr = nil;
+    
+    if ([cls respondsToSelector:@selector(ignoreColumnNames)]) {
+        igonreArr = [cls ignoreColumnNames];
+    }
+
+    
     for (int i = 0 ; i < outCount; i++) {
         
         Ivar ivar = varList[i];
@@ -34,6 +43,11 @@
         if ([ivarName hasPrefix:@"_"]) {
             ivarName = [ivarName substringFromIndex:1];
         }
+        
+        if ([igonreArr containsObject:ivarName]) {
+            continue;
+        }
+        
         
         // 获取成员变量类型
         NSString *type = [NSString stringWithUTF8String:ivar_getTypeEncoding(ivar)];
@@ -78,7 +92,18 @@
   return   [result componentsJoinedByString:@","];
 }
 
-#pragma mark --私有方法
++ (NSArray *)allTableSortedIvarNames:(Class)cls
+{
+
+    NSDictionary *dic = [self classIvarNameTypeDic:cls];
+    NSArray *keys = dic.allKeys;
+   keys = [keys sortedArrayUsingComparator:^NSComparisonResult(id  _Nonnull obj1, id  _Nonnull obj2) {
+        return [obj1 compare:obj2];
+    }];
+    return keys;
+}
+
+#pragma mark --私有方法 映射数据库和 OC类型的方法
 + (NSDictionary *)ocTypeToSqliteTypeDic{
   return   @{
       @"d": @"real", // double

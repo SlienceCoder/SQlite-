@@ -21,6 +21,8 @@
 		E751BEC11EC44F4100A8C1E2 /* SqliteTool.m in Sources */ = {isa = PBXBuildFile; fileRef = E751BEC01EC44F4100A8C1E2 /* SqliteTool.m */; };
 		E75313821EC5456F003E7D4C /* Splite__Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = E75313811EC5456F003E7D4C /* Splite__Tests.m */; };
 		E753138A1EC545D0003E7D4C /* SqliteToolTest.m in Sources */ = {isa = PBXBuildFile; fileRef = E75313891EC545D0003E7D4C /* SqliteToolTest.m */; };
+		E77D39341ED28F4600A3091A /* TableTool.m in Sources */ = {isa = PBXBuildFile; fileRef = E77D39331ED28F4600A3091A /* TableTool.m */; };
+		E77D39361ED2981400A3091A /* TableToolTest.m in Sources */ = {isa = PBXBuildFile; fileRef = E77D39351ED2981400A3091A /* TableToolTest.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +61,9 @@
 		E75313811EC5456F003E7D4C /* Splite__Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Splite__Tests.m; sourceTree = "<group>"; };
 		E75313831EC5456F003E7D4C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E75313891EC545D0003E7D4C /* SqliteToolTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SqliteToolTest.m; sourceTree = "<group>"; };
+		E77D39321ED28F4600A3091A /* TableTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableTool.h; sourceTree = "<group>"; };
+		E77D39331ED28F4600A3091A /* TableTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableTool.m; sourceTree = "<group>"; };
+		E77D39351ED2981400A3091A /* TableToolTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableToolTest.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -135,6 +140,8 @@
 				E724C0A21EC581C200C44834 /* SqliteModelTool.m */,
 				E724C0A71EC5851F00C44834 /* ModelTool.h */,
 				E724C0A81EC5851F00C44834 /* ModelTool.m */,
+				E77D39321ED28F4600A3091A /* TableTool.h */,
+				E77D39331ED28F4600A3091A /* TableTool.m */,
 				E724C0AE1EC5B55E00C44834 /* ModelProtocol.h */,
 			);
 			path = Classes;
@@ -155,6 +162,7 @@
 				E75313891EC545D0003E7D4C /* SqliteToolTest.m */,
 				E724C0AA1EC5881B00C44834 /* ModelToolTest.m */,
 				E75313831EC5456F003E7D4C /* Info.plist */,
+				E77D39351ED2981400A3091A /* TableToolTest.m */,
 			);
 			path = "Splite封装Tests";
 			sourceTree = "<group>";
@@ -267,6 +275,7 @@
 				E751BEAB1EC44DDC00A8C1E2 /* ViewController.m in Sources */,
 				E751BEA81EC44DDC00A8C1E2 /* AppDelegate.m in Sources */,
 				E751BEA51EC44DDC00A8C1E2 /* main.m in Sources */,
+				E77D39341ED28F4600A3091A /* TableTool.m in Sources */,
 				E751BEC11EC44F4100A8C1E2 /* SqliteTool.m in Sources */,
 				E724C0A31EC581C200C44834 /* SqliteModelTool.m in Sources */,
 				E724C0A61EC581CF00C44834 /* Student.m in Sources */,
@@ -277,6 +286,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E77D39361ED2981400A3091A /* TableToolTest.m in Sources */,
 				E75313821EC5456F003E7D4C /* Splite__Tests.m in Sources */,
 				E724C0AB1EC5881B00C44834 /* ModelToolTest.m in Sources */,
 				E753138A1EC545D0003E7D4C /* SqliteToolTest.m in Sources */,

@@ -10,6 +10,10 @@
 
 @protocol ModelProtocol <NSObject>
 
+@required
 + (NSString *)primaryKey;
+@optional
+
++ (NSArray *)ignoreColumnNames;
 
 @end

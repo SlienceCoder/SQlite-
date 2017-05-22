@@ -19,5 +19,194 @@
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Splite&#x5c01;&#x88c5;Tests/SqliteToolTest.m"
+            timestampString = "517113442.323648"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "38"
+            endingLineNumber = "38"
+            landmarkName = "-testExample"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[SqliteToolTest testExample]"
+                  moduleName = "Splite&#x5c01;&#x88c5;Tests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/xpchina/Desktop/sqlite%E5%B0%81%E8%A3%85/Splite%E5%B0%81%E8%A3%85/Splite%E5%B0%81%E8%A3%85Tests/SqliteToolTest.m"
+                  timestampString = "517125458.766006"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "38"
+                  endingLineNumber = "38"
+                  offsetFromSymbolStart = "74">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[SqliteToolTest testExample]"
+                  moduleName = "Splite&#x5c01;&#x88c5;Tests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/xpchina/Desktop/sqlite%E5%B0%81%E8%A3%85/Splite%E5%B0%81%E8%A3%85/Splite%E5%B0%81%E8%A3%85Tests/SqliteToolTest.m"
+                  timestampString = "517125458.767304"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "38"
+                  endingLineNumber = "38"
+                  offsetFromSymbolStart = "113">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[SqliteToolTest testExample]"
+                  moduleName = "Splite&#x5c01;&#x88c5;Tests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/xpchina/Desktop/sqlite%E5%B0%81%E8%A3%85/Splite%E5%B0%81%E8%A3%85/Splite%E5%B0%81%E8%A3%85Tests/SqliteToolTest.m"
+                  timestampString = "517125458.768613"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "38"
+                  endingLineNumber = "38"
+                  offsetFromSymbolStart = "783">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[SqliteToolTest testExample]"
+                  moduleName = "Splite&#x5c01;&#x88c5;Tests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/xpchina/Desktop/sqlite%E5%B0%81%E8%A3%85/Splite%E5%B0%81%E8%A3%85/Splite%E5%B0%81%E8%A3%85Tests/SqliteToolTest.m"
+                  timestampString = "517125458.769905"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "38"
+                  endingLineNumber = "38"
+                  offsetFromSymbolStart = "839">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[SqliteToolTest testExample]"
+                  moduleName = "Splite&#x5c01;&#x88c5;Tests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/xpchina/Desktop/sqlite%E5%B0%81%E8%A3%85/Splite%E5%B0%81%E8%A3%85/Splite%E5%B0%81%E8%A3%85Tests/SqliteToolTest.m"
+                  timestampString = "517125458.771196"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "38"
+                  endingLineNumber = "38"
+                  offsetFromSymbolStart = "961">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Splite&#x5c01;&#x88c5;/Classes/TableTool.m"
+            timestampString = "517125397.783932"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "72"
+            endingLineNumber = "72"
+            landmarkName = "+tableSortedColumnNames:uid:"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Splite&#x5c01;&#x88c5;Tests/TableToolTest.m"
+            timestampString = "517125389.838914"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "34"
+            endingLineNumber = "34"
+            landmarkName = "-testExample"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Splite&#x5c01;&#x88c5;/Classes/TableTool.m"
+            timestampString = "517118088.827202"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "16"
+            endingLineNumber = "16"
+            landmarkName = "+tableSortedColumnNames:uid:"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Splite&#x5c01;&#x88c5;/Classes/TableTool.m"
+            timestampString = "517125397.783932"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "51"
+            endingLineNumber = "51"
+            landmarkName = "+tableSortedColumnNames:uid:"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Splite&#x5c01;&#x88c5;/Classes/TableTool.m"
+            timestampString = "517118122.11754"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "28"
+            endingLineNumber = "28"
+            landmarkName = "+tableSortedColumnNames:uid:"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Splite&#x5c01;&#x88c5;/Classes/SqliteTool.m"
+            timestampString = "517118223.090752"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "107"
+            endingLineNumber = "107"
+            landmarkName = "+querySql:uid:"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
    </Breakpoints>
 </Bucket>
