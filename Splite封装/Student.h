@@ -19,4 +19,9 @@
 @property (nonatomic, assign) float score;
 @property (nonatomic, assign) float score2;
 @property (nonatomic, assign) float score3;
+
+
+@property (nonatomic, strong) NSArray *xx;
+@property (nonatomic, strong) NSDictionary *oo;
+
 @end

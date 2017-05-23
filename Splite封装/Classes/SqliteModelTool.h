@@ -62,5 +62,13 @@ typedef NS_ENUM(NSUInteger, ColumnNameToValueRelationType){
 + (BOOL)deletaWithSql:(NSString *)sql uid:(NSString *)uid;
 
 //
-//+ (BOOL)deleteModel:(Class)cls columnNames:(NSArray *)names relations:(NSArray *)relations values:(NSArray *)values andOr:(NSArray *)andOrs uids:(NSArray *)uids;
+// + (BOOL)deleteModel:(Class)cls columnNames:(NSArray *)names relations:(NSArray *)relations values:(NSArray *)values andOr:(NSArray *)andOrs uids:(NSArray *)uids;
+
++ (NSArray *)queryAllModels:(Class)cls uid:(NSString *)uid;
+
++ (NSArray *)queryModel:(Class)cls columnName:(NSString *)name relation:(ColumnNameToValueRelationType)relation value:(id)value uid:(NSString *)uid;
+
++ (NSArray *)queryModels:(Class)cls WithSql:(NSString *)sql uid:(NSString *)uid;
+
+
 @end

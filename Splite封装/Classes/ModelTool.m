@@ -118,10 +118,10 @@
       @"B": @"integer", // bool
       
       @"NSData": @"blob",
-      @"NSDictionary": @"blob",
-      @"NSMutableDictionary": @"blob",
-      @"NSArray": @"blob",
-      @"NSMutableArray": @"blob",
+      @"NSDictionary": @"text",
+      @"NSMutableDictionary": @"text",
+      @"NSArray": @"text",
+      @"NSMutableArray": @"text",
       
       @"NSString": @"text"
       };

@@ -66,6 +66,9 @@
     NSMutableArray *execSqls = [NSMutableArray array];
     
     NSString *primaryKey = [cls primaryKey];
+    
+    NSString *dropTmpTableSql = [NSString stringWithFormat:@"drop table if exists %@;", temptableName];
+    [execSqls addObject:dropTmpTableSql];
 
     NSString *createSql = [NSString stringWithFormat:@"create table if not exists %@ (%@,primary key(%@))",temptableName,[ModelTool columnNameAndTypesStr:cls],primaryKey];
     [execSqls addObject:createSql];
@@ -132,7 +135,11 @@
     }
     // 2.检测表格是否需要更新，需要就更新
     if ([self isTableRequiredUpdate:cls uid:uid]) {
-        [self updateTable:cls uid:uid];
+       BOOL result = [self updateTable:cls uid:uid];
+        if (!result) {
+            NSLog(@"更新数据库表结构失败");
+            return NO;
+        }
     }
     // 3.判断记录是否存在，主键
     // 从表格里面，按照主键，进行查询该记录，如果能够查询到
@@ -148,7 +155,7 @@
     NSString *checkSql = [NSString stringWithFormat:@"select * from %@ where %@ = '%@'",tableName,primaryKey,primaryValue];
     NSArray *result = [SqliteTool querySql:checkSql uid:uid];
     
-    // 获取字段数组
+    // 获取字段名称数组
     NSArray *columnNames = [ModelTool classIvarNameTypeDic:cls].allKeys;
     
    // 获取值数组
@@ -156,6 +163,19 @@
     NSMutableArray *values = [NSMutableArray array];
     for (NSString *columnName in columnNames) {
         id value = [model valueForKey:columnName];
+        
+        // 处理模型里面的数组等情况
+        if ([value isKindOfClass:[NSArray class]] || [value isKindOfClass:[NSDictionary class]]) {
+            // 在这里,把字典或者数组，处理成为一个字符串，保存到数据库里面去
+            
+            // 字典 或者数组 转 data
+            NSData *data = [NSJSONSerialization dataWithJSONObject:value options:NSJSONWritingPrettyPrinted error:nil];
+            
+            // data转text
+            value = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
+        }
+        
+        
         [values addObject:value];
     }
     
@@ -235,13 +255,86 @@
     return [SqliteTool deal:deleteSql uid:uid];
 }
 
-//typedef NS_ENUM(NSUInteger, ColumnNameToValueRelationType){
-//    ColumnNameToValueRelationTypeMore,
-//    ColumnNameToValueRelationTypeLess,
-//    ColumnNameToValueRelationTypeEqual,
-//    ColumnNameToValueRelationTypeMoreEqual,
-//    ColumnNameToValueRelationTypeLessEqual,
-//} ;
++ (NSArray *)queryAllModels:(Class)cls uid:(NSString *)uid
+{
+    NSString *tableName = [ModelTool tableName:cls];
+    // 1.sql
+    NSString *sql = [NSString stringWithFormat:@"select * from %@",tableName];
+    
+    // 2.执行
+    NSArray <NSDictionary *>*results = [SqliteTool querySql:sql uid:uid];
+    
+    // 3.处理结果集
+    return [self parseResults:results withClass:cls];
+}
+
++ (NSArray *)queryModel:(Class)cls columnName:(NSString *)name relation:(ColumnNameToValueRelationType)relation value:(id)value uid:(NSString *)uid
+{
+    NSString *tableName = [ModelTool tableName:cls];
+    // 1.拼接sql
+    NSString *sql = [NSString stringWithFormat:@"select * from %@ where %@ %@ '%@'",tableName,name,self.ColumnNameToValueRelationTypeDic[@(relation)],value];
+    // 2.查询结果
+    NSArray <NSDictionary *>*results = [SqliteTool querySql:sql uid:uid];
+    
+    // 3.处理结果集
+    return [self parseResults:results withClass:cls];
+}
+
++ (NSArray *)queryModels:(Class)cls WithSql:(NSString *)sql uid:(NSString *)uid
+{
+   
+    // 2.查询结果
+    NSArray <NSDictionary *>*results = [SqliteTool querySql:sql uid:uid];
+    
+    // 3.处理结果集
+    return [self parseResults:results withClass:cls];
+    
+}
+
+// 抽取结果集
++ (NSArray *)parseResults:(NSArray <NSDictionary *>*)results withClass:(Class)cls
+{
+    // 3.处理结果集
+    NSMutableArray *models = [NSMutableArray array];
+    
+    // 属性名称 -> 类型 dic
+    NSDictionary *nametypeDic = [ModelTool classIvarNameTypeDic:cls];
+    for (NSDictionary *modelDic in results) {
+        id model = [[cls alloc] init];
+        [models addObject:model];
+        
+        
+        [modelDic enumerateKeysAndObjectsUsingBlock:^(id  _Nonnull key, id  _Nonnull obj, BOOL * _Nonnull stop) {
+            
+            // 如果是字典或者数组
+            
+            NSString *type = nametypeDic[key];
+            
+            
+            id resultValue = obj;
+            if ([type isEqualToString:@"NSArray"] || [type isEqualToString:@"NSDictionary"]) {
+                
+                NSData *data = [obj dataUsingEncoding:NSUTF8StringEncoding];
+                
+                resultValue = [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:nil];
+                
+            } else if ([type isEqualToString:@"NSMutableArray"] || [type isEqualToString:@"NSMutableDictionary"]) {
+            
+                NSData *data = [obj dataUsingEncoding:NSUTF8StringEncoding];
+                
+                resultValue = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableLeaves error:nil];
+
+                
+            }
+            
+            [model setValue:resultValue forKey:key];
+        }];
+        
+        
+    }
+    return models;
+
+}
 
 + (NSDictionary *)ColumnNameToValueRelationTypeDic
 {

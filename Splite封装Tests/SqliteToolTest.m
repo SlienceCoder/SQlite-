@@ -58,10 +58,16 @@
 //    
 //    XCTAssertTrue(update);
     Student *stu = [[Student alloc] init];
-    stu.stuNum = 1;
-    stu.age2 = 1;
-    stu.name = @"科比";
-    stu.score = 1;
+    stu.stuNum = 4;
+    stu.age2 = 4;
+    stu.name = @"科比4";
+    stu.score = 4;
+    stu.xx = [@[@"2",@"3"] mutableCopy];
+    stu.oo = @{
+               @"a":@"aa",
+               @"b":@"bb"
+               };
+    
     
     [SqliteModelTool saveOrUpdateModel:stu uid:nil];
 //    [SqliteModelTool deleteModel:stu uid:nil];
@@ -74,7 +80,10 @@
 }
 - (void)test2{
     
-    [SqliteModelTool deleteModel:[Student class] columnName:@"name" relation:ColumnNameToValueRelationTypeEqual value:@"王二小2" uid:nil];
+//    [SqliteModelTool deleteModel:[Student class] columnName:@"name" relation:ColumnNameToValueRelationTypeEqual value:@"王二小2" uid:nil];
+//   NSArray *arr = [SqliteModelTool queryAllModels:[Student class] uid:nil];
+    
+    NSArray *ar = [SqliteModelTool queryModel:[Student class] columnName:@"name" relation:ColumnNameToValueRelationTypeEqual value:@"科比2" uid:nil];
     
     
 }
