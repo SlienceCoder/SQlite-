@@ -26,90 +26,13 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Splite&#x5c01;&#x88c5;Tests/SqliteToolTest.m"
-            timestampString = "517113442.323648"
+            timestampString = "517213828.088246"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "38"
-            endingLineNumber = "38"
-            landmarkName = "-testExample"
+            startingLineNumber = "78"
+            endingLineNumber = "78"
+            landmarkName = "-test2"
             landmarkType = "7">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "-[SqliteToolTest testExample]"
-                  moduleName = "Splite&#x5c01;&#x88c5;Tests"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/xpchina/Desktop/sqlite%E5%B0%81%E8%A3%85/Splite%E5%B0%81%E8%A3%85/Splite%E5%B0%81%E8%A3%85Tests/SqliteToolTest.m"
-                  timestampString = "517137457.256772"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "38"
-                  endingLineNumber = "38"
-                  offsetFromSymbolStart = "74">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "-[SqliteToolTest testExample]"
-                  moduleName = "Splite&#x5c01;&#x88c5;Tests"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/xpchina/Desktop/sqlite%E5%B0%81%E8%A3%85/Splite%E5%B0%81%E8%A3%85/Splite%E5%B0%81%E8%A3%85Tests/SqliteToolTest.m"
-                  timestampString = "517137457.258108"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "38"
-                  endingLineNumber = "38"
-                  offsetFromSymbolStart = "113">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "-[SqliteToolTest testExample]"
-                  moduleName = "Splite&#x5c01;&#x88c5;Tests"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/xpchina/Desktop/sqlite%E5%B0%81%E8%A3%85/Splite%E5%B0%81%E8%A3%85/Splite%E5%B0%81%E8%A3%85Tests/SqliteToolTest.m"
-                  timestampString = "517137457.259409"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "38"
-                  endingLineNumber = "38"
-                  offsetFromSymbolStart = "783">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "-[SqliteToolTest testExample]"
-                  moduleName = "Splite&#x5c01;&#x88c5;Tests"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/xpchina/Desktop/sqlite%E5%B0%81%E8%A3%85/Splite%E5%B0%81%E8%A3%85/Splite%E5%B0%81%E8%A3%85Tests/SqliteToolTest.m"
-                  timestampString = "517137457.260708"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "38"
-                  endingLineNumber = "38"
-                  offsetFromSymbolStart = "839">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "-[SqliteToolTest testExample]"
-                  moduleName = "Splite&#x5c01;&#x88c5;Tests"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/xpchina/Desktop/sqlite%E5%B0%81%E8%A3%85/Splite%E5%B0%81%E8%A3%85/Splite%E5%B0%81%E8%A3%85Tests/SqliteToolTest.m"
-                  timestampString = "517137457.262032"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "38"
-                  endingLineNumber = "38"
-                  offsetFromSymbolStart = "961">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

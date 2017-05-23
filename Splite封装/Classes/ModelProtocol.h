@@ -11,9 +11,13 @@
 @protocol ModelProtocol <NSObject>
 
 @required
+// 操作模型必须实现的方法，通过这个方法获取主键信息
+
 + (NSString *)primaryKey;
 @optional
-
+// 忽略的字段数组
 + (NSArray *)ignoreColumnNames;
 
+// 新字段-》旧的字段映射
++ (NSDictionary *)newNameToOldNameDic;
 @end

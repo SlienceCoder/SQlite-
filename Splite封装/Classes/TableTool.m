@@ -74,4 +74,14 @@
     
 }
 
++ (BOOL)isTableExists:(Class)cls uid:(NSString *)uid
+{
+    NSString *tableName = [ModelTool tableName:cls];
+    
+    NSString *queryCreateSqlStr = [NSString stringWithFormat:@"select sql from sqlite_master where type = 'table' and name = '%@'",tableName];
+    NSMutableArray *result = [SqliteTool querySql:queryCreateSqlStr uid:uid];
+    
+    return result.count > 0;
+}
+
 @end

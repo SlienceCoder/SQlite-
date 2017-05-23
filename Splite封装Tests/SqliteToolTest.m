@@ -9,6 +9,7 @@
 #import <XCTest/XCTest.h>
 #import "SqliteTool.h"
 #import "SqliteModelTool.h"
+#import "Student.h"
 
 @interface SqliteToolTest : XCTestCase
 
@@ -49,6 +50,33 @@
     [self measureBlock:^{
         // Put the code you want to measure the time of here.
     }];
+}
+
+- (void)testUpdateTable
+{
+//    BOOL update = [SqliteModelTool updateTable:[Student class] uid:nil];
+//    
+//    XCTAssertTrue(update);
+    Student *stu = [[Student alloc] init];
+    stu.stuNum = 1;
+    stu.age2 = 1;
+    stu.name = @"科比";
+    stu.score = 1;
+    
+    [SqliteModelTool saveOrUpdateModel:stu uid:nil];
+//    [SqliteModelTool deleteModel:stu uid:nil];
+}
+- (void)test{
+    
+    [SqliteModelTool deleteModel:[Student class] whereStr:@"score <= 100" uid:nil];
+    
+    
+}
+- (void)test2{
+    
+    [SqliteModelTool deleteModel:[Student class] columnName:@"name" relation:ColumnNameToValueRelationTypeEqual value:@"王二小2" uid:nil];
+    
+    
 }
 
 @end
