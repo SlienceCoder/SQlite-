@@ -59,7 +59,7 @@
 //    XCTAssertTrue(update);
     Student *stu = [[Student alloc] init];
     stu.stuNum = 4;
-    stu.age2 = 4;
+    stu.age = 4;
     stu.name = @"科比4";
     stu.score = 4;
     stu.xx = [@[@"2",@"3"] mutableCopy];
@@ -68,7 +68,7 @@
                @"b":@"bb"
                };
     
-    
+  
     [SqliteModelTool saveOrUpdateModel:stu uid:nil];
 //    [SqliteModelTool deleteModel:stu uid:nil];
 }

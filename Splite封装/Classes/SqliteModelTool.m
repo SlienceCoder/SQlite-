@@ -44,9 +44,11 @@
 // 表格是否需要和更新
 + (BOOL)isTableRequiredUpdate:(Class)cls uid:(NSString *)uid
 {
+    // // 1. 获取类对应的所有有效成员变量名称, 并排序
     NSArray *modelNames = [ModelTool allTableSortedIvarNames:cls];
+    // 2. 获取当前表格, 所有字段名称, 并排序
    NSArray *tableNames = [TableTool tableSortedColumnNames:cls uid:uid];
-    
+    // 3. 通过对比数据判定是否需要更新
     return ![modelNames isEqualToArray:tableNames];
 }
 
@@ -130,8 +132,9 @@
     // 保存一个模型
     Class cls = [model class];
     // 1.判断表格是否存在，不存在就创建
-    if ([TableTool isTableExists:cls uid:uid]) {
-        [self updateTable:cls uid:uid];
+    if (![TableTool isTableExists:cls uid:uid]) {
+//        [self updateTable:cls uid:uid];
+        [self createTable:cls uid:uid];
     }
     // 2.检测表格是否需要更新，需要就更新
     if ([self isTableRequiredUpdate:cls uid:uid]) {
